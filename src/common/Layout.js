@@ -19,6 +19,9 @@ function Layout() {
             <Link to="/create-ride">Create Ride</Link>
           </li>
           <li>
+            <Link to="/user-stories">User Stories</Link>
+            </li>
+          <li>
             <Link to="/Gibberish">Wrong Link Test</Link>
           </li>
         </ul>

@@ -7,6 +7,7 @@ import NoPageFound from "../pages/NoPageFound";
 import Quiz from "../components/Quiz";
 import Leaderboard from "../components/Leaderboard";
 import RideForm from "../components/RideForm";
+import UserStories from "../components/userStories";
 
 function AppRouter() {
   return (
@@ -16,6 +17,7 @@ function AppRouter() {
         <Route path="quiz" element={<Quiz />} />
         <Route path="leaderboard" element={<Leaderboard />} />
         <Route path="create-ride" element={<RideForm />} />
+        <Route path="user-stories" element={<UserStories />} />
         <Route path="*" element={<NoPageFound />} />
       </Route>
     </Routes>
