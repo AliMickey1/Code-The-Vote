@@ -10,6 +10,19 @@ function Layout() {
             <Link to="/">Home</Link>
           </li>
           <li>
+
+            <Link to="/quiz">Quiz</Link>
+          </li>
+          <li>
+            <Link to="/leaderboard">Leaderboard</Link>
+          </li>
+          <li>
+            <Link to="/create-ride">Create Ride</Link>
+          </li>
+          <li>
+            <Link to="/user-stories">User Stories</Link>
+            </li>
+          <li>
             <Link to="/Gibberish">Wrong Link Test</Link>
           </li>
         </ul>
