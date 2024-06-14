@@ -1,8 +1,11 @@
 // src/pages/LandingPage.js
 import React from 'react';
 import '../App.css';
-import Quiz from '../components/Quiz';
-import Leaderboard from '../components/Leaderboard';
+import LoginButton from '../Components/LoginButton';
+import LogoutButton from '../Components/LogoutButton';
+import Profile from '../Components/Profile';
+import Quiz from '../Components/Quiz';
+import Leaderboard from '../Components/Leaderboard';
 
 function LandingPage() {
   return (
@@ -11,6 +14,12 @@ function LandingPage() {
         <h1>Welcome to Car-Polling</h1>
         <p>Engage in protecting election integrity by participating in our car-pooling initiative.</p>
       </header>
+      <div className='authContainer'>
+        <h3>Authenticate</h3>
+        <LoginButton />
+        <LogoutButton />
+        {/* <Profile /> */}
+      </div>
       <div className="LandingPage-content">
         <section className="LandingPage-section">
           <h2>Car-Polling Quiz</h2>

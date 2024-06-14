@@ -37,3 +37,29 @@ code {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
+
+/* Container holding the authentication buttons */
+.authContainer {
+  
+  width: 150px;
+  padding-bottom: 10px;
+  background-color: white;
+  margin: 0 auto;
+  /* border: 1px solid black;
+  border-radius: 4px; */
+}
+
+/* Set a style for the submit button */
+.submitBtn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 75%;
+  opacity: 0.9;
+}
+
+.submitBtn:hover {
+  opacity: 1;
+}
