@@ -1,5 +1,5 @@
 // src/pages/LandingPage.js
-import React from 'react';
+import React from "react";
 
 import '../App.css'; // Make sure this path is correct
 
@@ -15,7 +15,10 @@ function LandingPage() {
     <div className="LandingPage">
       <header className="LandingPage-header">
         <h1>Welcome to Car-Polling</h1>
-        <p>Engage in protecting election integrity by participating in our car-pooling initiative.</p>
+        <p>
+          Engage in protecting election integrity by participating in our
+          car-pooling initiative.
+        </p>
       </header>
       <div className='authContainer'>
         <h3>Authenticate</h3>
