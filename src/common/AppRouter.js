@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import LandingPage from "../pages/LandingPage";
 import NoPageFound from "../pages/NoPageFound";
+
 import Quiz from "../components/Quiz";
 import Leaderboard from "../components/Leaderboard";
 import RideForm from "../components/RideForm";
@@ -21,6 +22,14 @@ function AppRouter() {
         <Route path="*" element={<NoPageFound />} />
       </Route>
     </Routes>
+
+
+function AppRouter() {
+  return (
+    <div className="App">
+      <LandingPage />
+    </div>
+
   );
 }
 

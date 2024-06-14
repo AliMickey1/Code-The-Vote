@@ -7,6 +7,7 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
 
   useEffect(() => {
+
     // Data for quiz questions
     const data = [
       {
@@ -79,6 +80,24 @@ const Quiz = () => {
           { text: "They know how to cope with stress.", isCorrect: false },
           { text: "They do not know how to cope with stress.", isCorrect: true },
           { text: "They are less likely to know someone who experienced a mass shooting.", isCorrect: false }
+    // Mock data for quiz questions
+    const data = [
+      {
+        question: "What is one of the key efforts to protect voting rights?",
+        answers: [
+          { text: "Unregulated campaign spending", isCorrect: false },
+          { text: "Election protection programs", isCorrect: true },
+          { text: "Partisan gerrymandering", isCorrect: false },
+          { text: "Voter suppression", isCorrect: false }
+        ]
+      },
+      {
+        question: "What is a significant risk factor affecting voter safety?",
+        answers: [
+          { text: "Lack of access to public transportation", isCorrect: true },
+          { text: "High property taxes", isCorrect: false },
+          { text: "Proximity to industrial areas", isCorrect: false },
+          { text: "High levels of tourism", isCorrect: false }
         ]
       }
     ];

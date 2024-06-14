@@ -1,6 +1,10 @@
 // src/pages/LandingPage.js
 import React from 'react';
+
 import '../App.css'; // Make sure this path is correct
+
+import '../App.css';
+
 import Quiz from '../components/Quiz';
 import Leaderboard from '../components/Leaderboard';
 
