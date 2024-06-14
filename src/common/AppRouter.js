@@ -4,11 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import LandingPage from "../pages/LandingPage";
 import NoPageFound from "../pages/NoPageFound";
-
+import UserStories from "../components/userStories";
 import Quiz from "../components/Quiz";
 import Leaderboard from "../components/Leaderboard";
 import RideForm from "../components/RideForm";
-import UserStories from "../components/userStories";
 
 function AppRouter() {
   return (
@@ -22,14 +21,6 @@ function AppRouter() {
         <Route path="*" element={<NoPageFound />} />
       </Route>
     </Routes>
-
-
-function AppRouter() {
-  return (
-    <div className="App">
-      <LandingPage />
-    </div>
-
   );
 }
 
