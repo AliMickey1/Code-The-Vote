@@ -1,5 +1,7 @@
 // src/Layout.js
 import { Link, Outlet } from "react-router-dom";
+import LoginButton from "../Components/LoginButton";
+import LogoutButton from "../Components/LogoutButton";
 
 function Layout() {
   return (
