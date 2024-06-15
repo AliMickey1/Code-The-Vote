@@ -1,3 +1,4 @@
+Once in program directory, 
 Required download commands:
 
 npm install
