@@ -6,7 +6,8 @@ import '../App.css'; // Make sure this path is correct
 import '../App.css';
 import LoginButton from '../Components/LoginButton';
 import LogoutButton from '../Components/LogoutButton';
-// import Profile from '../Components/Profile';
+// import AuthenticationButton from "../Components/Authentication";
+import Profile from '../Components/Profile';
 import Quiz from '../Components/Quiz';
 import Leaderboard from '../Components/Leaderboard';
 
@@ -22,9 +23,10 @@ function LandingPage() {
       </header>
       <div className='authContainer'>
         <h3>Authenticate</h3>
+        {/* <AuthenticationButton /> */}
         <LoginButton />
         <LogoutButton />
-        {/* <Profile /> */}
+        <Profile />
       </div>
       <div className="LandingPage-content">
         <section className="LandingPage-section">
