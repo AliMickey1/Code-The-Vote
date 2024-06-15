@@ -1,42 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import DriverProfile from './DriverProfile';
-import RiderProfile from './RiderProfile';
+import ProfileForm from './ProfileForm';
 
 function Profile() {
-    const [selectedOption, setSelectedOption] = useState('driver');
-    const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
-    
+    const { user } = useAuth0();
 
-      
-    const handleSelectChange = (event) => {
-        setSelectedOption(event.target.value);
+    if (!user) {
+        return <div>Loading...</div>;
     }
-
-    if (!isAuthenticated) {
-        return <button onClick={loginWithRedirect}>Log In</button>;
+    else if(user.type == null) {
+      <ProfileForm />
     }
 
     return (
-      isAuthenticated && (
-        <div className="profile">
-            <img src={user.picture} alt={user?.name} />
-             <h2>{user?.name}</h2>
-             <ul>
-                 {Object.keys(user).map((objKey, i) => <li key={i}>{objKey}: {user[objKey]}</li>)}
-             </ul>
-            <button onClick={logout}>Log Out</button>
-
-            <select value={selectedOption} onChange={handleSelectChange}>
-                <option value="driver">Driver</option>
-                <option value="rider">Rider</option>
-            </select>
-
-            {/* {selectedOption === 'driver' ? <DriverProfile /> : <RiderProfile />} */}
+        <div>
+            <img src={user.picture} alt={user.name} />
+            <h2>{user.name}</h2>
+            <p>{user.email}</p>
+            <ProfileForm />
         </div>
-        
-    )
-    )
+    );
 }
 
 export default Profile;
