@@ -1,15 +1,13 @@
 // src/pages/LandingPage.js
 import React from "react";
 
-import '../App.css'; // Make sure this path is correct
-
-import '../App.css';
-import LoginButton from '../Components/LoginButton';
-import LogoutButton from '../Components/LogoutButton';
+import "../App.css"; // Make sure this path is correct
+import LoginButton from "../Components/LoginButton";
+import LogoutButton from "../Components/LogoutButton";
 // import AuthenticationButton from "../Components/Authentication";
-import Profile from '../Components/Profile';
-import Quiz from '../Components/Quiz';
-import Leaderboard from '../Components/Leaderboard';
+import Profile from "../Components/Profile";
+import Quiz from "../Components/Quiz";
+import Leaderboard from "../Components/Leaderboard";
 
 function LandingPage() {
   return (
@@ -21,7 +19,9 @@ function LandingPage() {
           car-pooling initiative.
         </p>
       </header>
+
       <div className='authContainer'>
+
         {/* <AuthenticationButton /> */}
         <LoginButton />
         <LogoutButton />
