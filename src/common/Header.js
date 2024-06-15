@@ -40,9 +40,14 @@ function Header() {
           </li>
         </>
       ) : (
-        <li className="nav-item">
-          <LoginButton />
-        </li>
+        <>
+          <li className="nav-item">
+            <Link to="/signup">Sign up</Link>
+          </li>
+          <li className="nav-item">
+            <LoginButton />
+          </li>
+        </>
       )}
     </ul>
   );
