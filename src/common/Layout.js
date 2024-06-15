@@ -7,7 +7,9 @@ function Layout() {
       <nav>
         <ul className="nav-list">
           <li className="nav-item">
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <h1>Car-Polling</h1>
+            </Link>
           </li>
           <li className="nav-item">
             <Link to="/quiz">Quiz</Link>
@@ -29,8 +31,12 @@ function Layout() {
           </li>
         </ul>
       </nav>
-      <hr />
       <Outlet />
+      <div>
+        <ul className="footer">
+          <h1>Chat</h1>
+        </ul>
+      </div>
     </div>
   );
 }

@@ -14,24 +14,54 @@ body {
     text-align: center;
   }
 
+  /* Layout section */
+
   .nav-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
+    background-color: #282c34;
   }
 
   .nav-item {
     flex: 1;
     text-align: center;
+  
   }
+
+  .nav-item a:link,
+  .nav-item a:visited,
+  .nav-item a:hover,
+  .nav-item a:active {
+  color: White; 
+  text-decoration: none; 
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  padding-right: 5%;
+  margin: 0;
+  background-color: #282c34;
+  color: white;
+}
+
+/* End of layout section */
+  
   
   .LandingPage-header {
-    background-color: #282c34;
+    background-color: #2C85F9;
     color: white;
-    padding: 20px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
   }
   
   .LandingPage-content {
