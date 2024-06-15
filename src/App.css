@@ -481,6 +481,59 @@ background-color: #0056b3;
   background-color: #f8f9fa;
 }
 
+
+/* Quiz Styles */
+.quiz-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.question-section {
+  margin-bottom: 20px;
+}
+
+.question-count {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column; /* Arrange answers vertically */
+  gap: 10px; /* Add space between the answer buttons */
+}
+
+.answer-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Make the button take full width */
+  max-width: 400px; /* Optional: Set a max width */
+}
+
+.answer-button:hover {
+  background-color: #0056b3;
+}
+
+.score-section {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;
+}
+
 /* Animation */
 @keyframes fadeIn {
   from {
