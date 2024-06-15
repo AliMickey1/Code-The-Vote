@@ -14,6 +14,25 @@ body {
     text-align: center;
   }
 
+
+  /* wrong page section */
+
+
+
+  /* end of wrong page section */
+  .wrongPageBackground {
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0 20px; /* Padding around the content */
+    box-sizing: border-box; /* Ensure padding is included in total height */
+    text-align: center; /* Center text within container */
+    line-height: 1.5; /* Example line height */
+}
   /* Layout section */
 
   .nav-list {
