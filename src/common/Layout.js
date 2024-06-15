@@ -29,17 +29,22 @@ function Layout() {
           <li className="nav-item">
             <Link to="/Gibberish">Wrong Link Test</Link>
           </li>
-          <li className="nav-item">
-            {isAuthenticated ? (
-              <Link
-                to="/profile"
-                style={{ color: "#E2F0F7", paddingRight: "75px" }}
-              >
-                Profile
-              </Link>
-            ) : null}
-            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-          </li>
+          {isAuthenticated ? (
+            <>
+              <li className="nav-item">
+                <Link to="/profile" className="nav-item">
+                  Profile
+                </Link>
+              </li>
+              <li className="nav-item">
+                <LogoutButton />
+              </li>
+            </>
+          ) : (
+            <li className="nav-item">
+              <LoginButton />
+            </li>
+          )}
         </ul>
       </nav>
       <Outlet />
