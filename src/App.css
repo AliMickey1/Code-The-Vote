@@ -54,6 +54,56 @@ body {
   color: white;
 }
 
+#chatbox {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  max-height: 400px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#chatbox.chatbox-visible {
+  display: flex;
+}
+
+#chatbox .chatbox-header {
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbox .chatbox-body {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#chatbox .chatbox-footer {
+  padding: 10px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbox .chatbox-footer input {
+  width: 80%;
+  padding: 5px;
+}
+
+#chatbox .chatbox-footer button {
+  padding: 5px 10px;
+}
+
 /* End of layout section */
   
   
