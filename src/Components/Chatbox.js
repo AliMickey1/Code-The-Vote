@@ -16,7 +16,13 @@ function Chatbox() {
         </button>
       </div>
       <div className="chatbox-body">
-        <p>Welcome to the chat!</p>
+        <p>Notifications</p>
+      </div>
+      <div className="chatbox-body">
+        <p>Open Chats</p>
+      </div>
+      <div className="chatbox-body">
+        <p>Report a problem</p>
       </div>
       <div className="chatbox-footer">
         <input type="text" placeholder="Type a message..." />
