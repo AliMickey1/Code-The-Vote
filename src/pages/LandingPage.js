@@ -20,13 +20,7 @@ function LandingPage() {
         </p>
       </header>
 
-      <div className='authContainer'>
-
-        {/* <AuthenticationButton /> */}
-        <LoginButton />
-        <LogoutButton />
-        <Profile />
-      </div>
+      <div className="authContainer"></div>
       <div className="LandingPage-content">
         <section className="LandingPage-section">
           <h2>Car-Polling Quiz</h2>

@@ -1,9 +1,10 @@
-// src/Layout.js
 import { Link, Outlet } from "react-router-dom";
 import LoginButton from "../Components/LoginButton";
 import LogoutButton from "../Components/LogoutButton";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Layout() {
+  const { isAuthenticated } = useAuth0();
   return (
     <div>
       <nav>
@@ -29,7 +30,15 @@ function Layout() {
             <Link to="/Gibberish">Wrong Link Test</Link>
           </li>
           <li className="nav-item">
-            <Link to="/Profile">Profile</Link>
+            {isAuthenticated ? (
+              <Link
+                to="/profile"
+                style={{ color: "#E2F0F7", paddingRight: "75px" }}
+              >
+                Profile
+              </Link>
+            ) : null}
+            {isAuthenticated ? <LogoutButton /> : <LoginButton />}
           </li>
         </ul>
       </nav>
