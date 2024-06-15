@@ -2,10 +2,6 @@
 import React from "react";
 
 import "../App.css"; // Make sure this path is correct
-import LoginButton from "../Components/LoginButton";
-import LogoutButton from "../Components/LogoutButton";
-// import AuthenticationButton from "../Components/Authentication";
-import Profile from "../Components/Profile";
 import Quiz from "../Components/Quiz";
 import Leaderboard from "../Components/Leaderboard";
 
@@ -20,13 +16,7 @@ function LandingPage() {
         </p>
       </header>
 
-      <div className='authContainer'>
-
-        {/* <AuthenticationButton /> */}
-        <LoginButton />
-        <LogoutButton />
-        <Profile />
-      </div>
+      <div className="authContainer"></div>
       <div className="LandingPage-content">
         <section className="LandingPage-section">
           <h2>Car-Polling Quiz</h2>
