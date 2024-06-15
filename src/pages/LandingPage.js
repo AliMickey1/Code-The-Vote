@@ -19,8 +19,9 @@ function LandingPage() {
           car-pooling initiative.
         </p>
       </header>
-      <div className="authContainer">
-        <h3>Authenticate</h3>
+
+      <div className='authContainer'>
+
         {/* <AuthenticationButton /> */}
         <LoginButton />
         <LogoutButton />
