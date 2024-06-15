@@ -15,6 +15,11 @@ code {
   text-align: center;
 }
 
+/* h2 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+} */
 /* Layout section */
 
 .nav-list {
@@ -183,8 +188,76 @@ background-color: #0056b3;
 
 .leaderboard-item:hover {
   transform: scale(1.02);
-  background-color: #f8f9fa;
+  background-color: #1063b5;
 }
+
+
+.LandingPage-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.LandingPage-content {
+  padding: 20px;
+}
+
+.LandingPage-section {
+  margin-bottom: 20px;
+}
+
+.LandingPage-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.LandingPage-section ul li {
+  margin-bottom: 10px;
+}
+
+.LandingPage-section ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.LandingPage-section ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Badge Section Styles */
+.LandingPage-section {
+  background-color: #bfc3c0; /* Light gray background for better contrast */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Badge Styles */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.badge {
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.badge-blue {
+  background-color: #007bff;
+}
+
+.badge-green {
+  background-color: #28a745;
+}
+
+.badge-red {
+  background-color: #dc3545;
+}
+
 
 /* Animation */
 @keyframes fadeIn {

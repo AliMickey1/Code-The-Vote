@@ -1,11 +1,17 @@
 // src/pages/LandingPage.js
 import React from "react";
-
+import { useState } from "react";
 import "../App.css"; // Make sure this path is correct
-import Quiz from "../Components/Quiz";
-import Leaderboard from "../Components/Leaderboard";
+import Leaderboard from "../Components/Leaderboard"; 
 
 function LandingPage() {
+
+const [showLeaderboard, setShowLeaderboard] = useState(false);
+
+const toggleLeaderboard = () => {
+  setShowLeaderboard(!showLeaderboard);
+};
+
   return (
     <div className="LandingPage">
       <header className="LandingPage-header">
@@ -19,12 +25,33 @@ function LandingPage() {
       <div className="authContainer"></div>
       <div className="LandingPage-content">
         <section className="LandingPage-section">
-          <h2>Car-Polling Quiz</h2>
-          <Quiz />
+          <h2>Election Protection Resources</h2>
+          <ul>
+            <li><a href="https://statesuniteddemocracy.org/priorities/election-protection/" target="_blank" rel="noopener noreferrer">States United Democracy Center: Election Protection</a></li>
+            <li><a href="https://www.brennancenter.org/our-work/research-reports/digital-disinformation-and-vote-suppression" target="_blank" rel="noopener noreferrer">Brennan Center for Justice: Digital Disinformation and Vote Suppression</a></li>
+            <li><a href="https://www.safewise.com/state-of-safety/" target="_blank" rel="noopener noreferrer">SafeWise: State of Safety</a></li>
+            <li><a href="https://projects.fivethirtyeight.com/polls/president-general/2024/" target="_blank" rel="noopener noreferrer">FiveThirtyEight: 2024 Presidential Polls</a></li>
+            <li><a href="https://www.apa.org/news/press/releases/2019/08/fear-mass-shooting" target="_blank" rel="noopener noreferrer">APA: Fear of Mass Shootings</a></li>
+            <li><a href="https://electiontaskforce.org/elections-dashboard/" target="_blank" rel="noopener noreferrer">Election Task Force: Elections Dashboard</a></li>
+            <li><a href="https://www.rockthevote.org/" target="_blank" rel="noopener noreferrer">Rock the Vote</a></li>
+            <li><a href="https://www.lgbtmap.org/democracy-maps/laws_protecting_election_officials_against_threats" target="_blank" rel="noopener noreferrer">LGBTQ MAP: Laws Protecting Election Officials Against Threats</a></li>
+          </ul>
         </section>
         <section className="LandingPage-section">
+          <h2>Gamified Badges</h2>
+          <div className="badges">
+            <span className="badge badge-blue">Participation Badge</span>
+            <span className="badge badge-green">Quiz Master</span>
+            <span className="badge badge-red">Top Contributor</span>
+          </div>
+      </section>
+
+        <section className="LandingPage-section">
           <h2>Leaderboard</h2>
-          <Leaderboard />
+          {showLeaderboard && <Leaderboard />}
+          <button onClick={toggleLeaderboard}>
+            {showLeaderboard ? "Read Less" : "Read More"}
+          </button>
         </section>
       </div>
     </div>
