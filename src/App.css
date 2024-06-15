@@ -40,6 +40,8 @@ body {
   text-decoration: none; 
 }
 
+/*footer is tall and may need adjusted later */
+
 .footer {
   display: flex;
   justify-content: flex-end;
