@@ -22,7 +22,6 @@ function LandingPage() {
         </p>
       </header>
       <div className='authContainer'>
-        <h3>Authenticate</h3>
         {/* <AuthenticationButton /> */}
         <LoginButton />
         <LogoutButton />
