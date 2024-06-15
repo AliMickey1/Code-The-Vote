@@ -258,6 +258,40 @@ background-color: #0056b3;
   background-color: #dc3545;
 }
 
+/* Badge Links Styles */
+.badge-links {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.badge-link {
+  background-color: #ff0088;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.badge-link:hover {
+  background-color: #0056b3;
+}
+
+/* Cartoon Car Image Styles */
+.cartoon-car {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cartoon-car img {
+  width: 400px; /* Adjust the size as needed */
+  height: auto;
+}
+
+
 
 /* Animation */
 @keyframes fadeIn {

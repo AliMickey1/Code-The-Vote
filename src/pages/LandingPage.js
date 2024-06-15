@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import "../App.css"; // Make sure this path is correct
+import { Link } from "react-router-dom";
 import Leaderboard from "../Components/Leaderboard"; 
 
 function LandingPage() {
@@ -38,11 +39,22 @@ const toggleLeaderboard = () => {
           </ul>
         </section>
         <section className="LandingPage-section">
-          <h2>Gamified Badges</h2>
+          <h2>Want a badge like this? Participate in our Quizzes or share a ride!</h2>
           <div className="badges">
             <span className="badge badge-blue">Participation Badge</span>
             <span className="badge badge-green">Quiz Master</span>
             <span className="badge badge-red">Top Contributor</span>
+          </div>
+
+
+          <div className="badge-links">
+            <Link to="/quiz" className="badge-link">Take the Quiz</Link>
+            <Link to="/create-ride" className="badge-link">Create a Ride</Link>
+          </div>
+
+          
+          <div className="cartoon-car">
+          <img src="https://clipartmag.com/images/car-cartoon-images-16.jpg" alt="Cartoon Car" />
           </div>
       </section>
 
