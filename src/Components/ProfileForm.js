@@ -5,28 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function ProfileForm() {
     const [agreed, setAgreed] = useState(false);
-    const [role, setRole] = useState("");
     const navigate = useNavigate();
- 
-        
-        const handleSubmit = (role) => {
-            if(!agreed) {
-                alert("Please complete all required fields.")
-              }
-            else{
-                navigate('/driverprofile');
-
-                if (role === 'driver') {
-                    // navigate('/driverprofile');
-                // } else if(role === 'rider') {
-                }
-                else{
-                    navigate('/driverprofile');
-
-                    navigate('/riderprofile');
-                }
-            }
-          };
 
           const handleDriverSignup = () => {
             if(!agreed) {
@@ -69,9 +48,7 @@ function ProfileForm() {
         </section>
 
         <section className="SignUpPage-section">
-            <form onSubmit={handleSubmit}>
-
-            <h2> Role Selection</h2>
+             <h2> Role Selection</h2>
             <div>
                 <button className="button driver-button" onClick={handleDriverSignup}>
                     Driver Signup
@@ -80,9 +57,7 @@ function ProfileForm() {
                     Rider Signup
                 </button>
                 </div>
- 
 
-    </form>
 
  
     </section>
