@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../App.css"; // Make sure this path is correct
 import { useNavigate } from "react-router-dom";
-import Leaderboard from "../Components/Leaderboard"; 
+import Leaderboard from "../Components/Leaderboard";
+import Quiz from "../Components/Quiz";
 import participationBadge from '../assets/participation-badge.png.webp'; // Adjust the path as necessary
 import quizMaster from '../assets/quiz-master.png'; // Adjust the path as necessary
 import topContributor from '../assets/top-contributor.png'; // Adjust the path as necessary
@@ -23,7 +24,7 @@ function LandingPage() {
   };
 
   const handleQuiz = () => {
-    navigate("/quiz");
+    setShowSection("quiz");
   };
 
   const handleLeaderboard = () => {
@@ -58,12 +59,14 @@ function LandingPage() {
           </div>
           <div className="right-column">
             <h3>Want a cool badge like this?</h3>
-            <p>You can earn them by sharing rides and taking quizzes!</p>
             <div className="badges">
               <img src={participationBadge} alt="Participation Badge" className="badge-icon" />
               <img src={quizMaster} alt="Quiz Master" className="badge-icon" />
               <img src={topContributor} alt="Top Contributor" className="badge-icon" />
             </div>
+
+            <p>You can earn them by sharing rides and taking quizzes!</p>
+
             <div className="badge-links">
               <button onClick={handleQuiz}>Click here for quizzes!</button>
               <button onClick={handleLeaderboard}>Click here to see leaderboard info!</button>
@@ -77,6 +80,13 @@ function LandingPage() {
         <div className="LandingPage-section">
           <button onClick={handleBack}>Back</button>
           <Leaderboard />
+        </div>
+      )}
+
+      {showSection === "quiz" && (
+        <div className="LandingPage-section">
+          <button onClick={handleBack}>Back</button>
+          <Quiz />
         </div>
       )}
 
