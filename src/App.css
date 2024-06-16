@@ -389,37 +389,40 @@ background-color: #0056b3;
 }
 
 
+/* Leaderboard items styling */
+
 .leaderboard-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
-}
-
-.leaderboard-container ul {
-  list-style: none;
-  padding: 0;
 }
 
 .leaderboard-item {
-  background-color: #e9ecef;
-  margin-bottom: 10px;
+  background-color: #fff;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #dee2e6;
-  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .leaderboard-item p {
   margin: 5px 0;
 }
 
-.leaderboard-item:hover {
-  transform: scale(1.02);
-  background-color: #1063b5;
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.badge-icon {
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -461,32 +464,59 @@ background-color: #0056b3;
   border-radius: 8px;
 }
 
-/* Badge Styles */
-.badges {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+/* Firework animation */
+@keyframes explode {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 
-.badge {
-  padding: 10px 20px;
-  border-radius: 12px;
-  color: #fff;
-  font-weight: bold;
-  animation: fadeIn 1s ease-in-out;
+.firework {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  opacity: 0;
 }
 
-.badge-blue {
-  background-color: #007bff;
+.firework-1 {
+  animation: explode 1s ease-out infinite;
+  background: red;
 }
 
-.badge-green {
-  background-color: #28a745;
+.firework-2 {
+  animation: explode 1s 0.2s ease-out infinite;
+  background: yellow;
 }
 
-.badge-red {
-  background-color: #dc3545;
+.firework-3 {
+  animation: explode 1s 0.4s ease-out infinite;
+  background: blue;
+}
+
+.firework-4 {
+  animation: explode 1s 0.6s ease-out infinite;
+  background: green;
+}
+
+.firework-5 {
+  animation: explode 1s 0.8s ease-out infinite;
+  background: purple;
+}
+
+.firework-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
 /* Badge Links Styles */
@@ -682,4 +712,24 @@ background-color: #0056b3;
   to {
     opacity: 1;
   }
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.driver-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+}
+
+.rider-button {
+  background-color: #008CBA; /* Blue */
+  color: white;
+  border: none;
 }

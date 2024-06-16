@@ -7,7 +7,7 @@ import Quiz from "../Components/Quiz";
 import Leaderboard from "../Components/Leaderboard";
 import RideForm from "../Components/RideForm";
 import VolunteerDriver from "../pages/VolunteerSignup";
-import Profile from "../Components/Profile";
+import LoginButton from "../Components/LoginButton";
 import ProfileForm from "../Components/ProfileForm";
 import DriverProfile from "../Components/DriverProfile";
 import RiderProfile from "../Components/RiderProfile";
@@ -27,6 +27,7 @@ function AppRouter() {
         <Route path="signup" element={<ProfileForm />} />
         <Route path="driverprofile" element={<DriverProfile />} />
         <Route path="riderprofile" element={<RiderProfile />} />
+        <Route path="login" element={<LoginButton />} />
       </Route>
     </Routes>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Profile from "./Profile";
+import LoginButton from "./LoginButton";
 import { useNavigate } from "react-router-dom";
 
 function RiderProfile({setProfile}) {
@@ -15,9 +16,7 @@ function RiderProfile({setProfile}) {
    
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        Profile({custname, email, phoneNumber, languagePreference, accessibilityNeeds, transportationNeeds, otherInfo})
-        navigate('/profile')
+        navigate('/login')
     }
 
     const handleChange = (event) => {
@@ -26,11 +25,13 @@ function RiderProfile({setProfile}) {
         } else {
           setTransportationNeeds(prev => prev.filter(option => option !== event.target.value));
         }
+        Profile({custname, email, phoneNumber, languagePreference, accessibilityNeeds, transportationNeeds, otherInfo})
+
       };
 
 return (
     <div>
-<form>
+<form onSubmit={handleSubmit}>
     <label>
         Name:
         <input type="text" name="custname" onChange={(e) => setCustName(e.target.value)} />
@@ -84,7 +85,7 @@ return (
         </label> <br/>        
         
 
-                <button type="submit" onSubmit={handleSubmit}>Submit</button>
+        <button type="submit">Submit</button>
 
      </form>
     </div>

@@ -27,16 +27,17 @@ function DriverProfile({setProfile}) {
         })
     const [times, setTimes] = useState("")
 
-    const [selectedOptions, setSelectedOptions] = useState([]);
+    // const [selectedOptions, setSelectedOptions] = useState([]);
 
     const handleInputChange = (event) => {
         const selected = Array.from(event.target.selectedOptions, option => option.value);
         setTimes(selected);
+        Profile({custname, email, phoneNumber, languagePreference, yearsOfExperience, availability, times, accessibilityNeeds, vehicleColor, vehicleMake, vehicleModel, vehicleType,  otherInfo})
+
       };
 
-    const handleSubmit = (event) => {
-        Profile({custname, email, phoneNumber, languagePreference, yearsOfExperience, availability, times, accessibilityNeeds, vehicleColor, vehicleMake, vehicleModel, vehicleType,  otherInfo})
-        navigate('/profile')
+      const handleSubmit = (event) => {
+        navigate('/login')
     }
 
     return (
