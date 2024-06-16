@@ -6,6 +6,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
@@ -478,6 +485,12 @@ body {
   max-width: 100%;
 }
 
+.profile-container .profile-type img {
+  width:20%;
+  display: flex;
+  align-content: left;
+}
+
 .profile-container .username {
   font-size: 30px;
   color: #333;
@@ -495,6 +508,7 @@ body {
 .preferences p{
   font-weight: bold;
   text-decoration: underline;
+  text-align: center;
 }
 
 .preferences h3{
@@ -503,7 +517,6 @@ body {
 
 .preferences li{
   margin-left: 20px;
-  /* text-align: left; */
 }
 
 .profile-container .progress-bar {
@@ -518,14 +531,13 @@ body {
 .profile-container .progress-bar .progress {
   height: 100%;
   background-color: #4caf50;
-  width: 50%; /* Adjust this to represent the user's progress */
+  width: 88%; /* Adjust this to represent the user's progress */
 }
 
 .badge-container{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .imgReduce{
@@ -533,8 +545,9 @@ body {
 
 }
 
-
-
+.badges-section-profile{
+  text-decoration: underline;
+}
 
 
 /* end of Profile section */
@@ -605,6 +618,7 @@ body {
   flex-direction: column;
   justify-content: center; 
   align-items: center; 
+  
 }
 
 .LandingPage-content {

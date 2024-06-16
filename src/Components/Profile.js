@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import ProfileForm from './ProfileForm';
 import quiz from '../assets/Decoration/quiz.png'
 import participation from '../assets/Decoration/participate.png'
+import profileType from '../assets/Decoration/rider-badge.png'
 
 function Profile({ Profile }) {
   const { user } = useAuth0();
@@ -17,6 +18,9 @@ function Profile({ Profile }) {
 
     return (
         <div class="profile-container">
+        <div className='profile-type'>
+            <img src={profileType} alt='rider' />
+        </div>
             <div class="profile-picture">
                 <img src={user.picture} alt={user.name} />
             </div>
@@ -33,28 +37,26 @@ function Profile({ Profile }) {
                 <p>Language preference(s): </p>
                 <ul class='centered'>
                     <li>English</li>
-                    <p>Transportation Needs: </p>
+                        <p>Transportation Needs: </p>
                     <li>I need to go to my voting location to vote on election day.</li>
                     <li>I need to go to my voting location to register to vote.</li>
-                    <p>Accessibility Needs: </p>
+                        <p>Accessibility Needs: </p>
                     <li>N/A</li>
-                    <p>Any other information?</p>
+                        <p>Any other information?</p>
                     <li>None</li>
                 </ul>
             </div>
             <div class="progress-bar">
                 <div class="progress" id="progress"></div>
             </div>
-
-            <div className='badge-container'>
-                <img className='imgReduce' src={quiz} alt='quiz badge' />
-                <img className='imgReduce' src={participation} alt='participation badge' />
-            </div>
-            
+            <section className='badges-section-profile'>
+                <h2>Badges</h2>
+                <div className='badge-container'>
+                    <img className='imgReduce' src={quiz} alt='quiz badge' />
+                    <img className='imgReduce' src={participation} alt='participation badge' />
+                </div>
+            </section>
           
-
-
-            {/* <ProfileForm /> */}
         </div>
     );
 }
