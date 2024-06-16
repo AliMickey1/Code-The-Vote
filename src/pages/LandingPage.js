@@ -52,18 +52,20 @@ function LandingPage() {
             <div className="column">
               <h3>Need help voting?</h3>
               <button onClick={handleRequestRide}>
-                Click here to *Request a ride*
+                Click here to Request a ride
               </button>
             </div>
             <div className="column">
               <h3>Interested in volunteering?</h3>
               <button onClick={handleVolunteerRide}>
-                Click here to *Volunteer a ride*
+                Click here to Volunteer a ride
               </button>
             </div>
           </div>
           <div className="right-column">
-            <h3>Want a cool badge like this?</h3>
+            <h3 style={{ textAlign: "center" }}>
+              Want a cool badge like this?
+            </h3>
             <div className="badges">
               <img
                 src={participationBadge}
@@ -78,7 +80,9 @@ function LandingPage() {
               />
             </div>
 
-            <p>You can earn them by sharing rides and taking quizzes!</p>
+            <p style={{ textAlign: "center" }}>
+              You can earn them by sharing rides and taking quizzes!
+            </p>
 
             <div className="badge-links">
               <button onClick={handleQuiz}>Click here for quizzes!</button>
