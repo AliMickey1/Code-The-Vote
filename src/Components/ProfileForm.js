@@ -26,12 +26,13 @@ function ProfileForm() {
           };
 
     return (
+    <div className='Signup-container'>
         <div className="SignUpPage-header">
-        <h1>Sign Up for Car-Polling</h1>
-        <p>Please complete the following steps to sign up:</p>
-
+            <h1>Sign Up for Car-Polling</h1>
+                <p>Please complete the following steps to sign up:</p>
+        
         {/* Disclaimer */}
-        <section className="SignUpPage-section">
+        <section className="Disclaimer-section">
           <h2>Disclaimer</h2>
             <p>This carpooling application is intended to facilitate transportation arrangements between willing users of the service. The application is not a transportation service provider, broker, or agent. It does not screen participating drivers or riders. Users are solely responsible for selecting the individuals with whom they travel. Users must make their own determinations as to the suitability of such individuals.
                 By using this application, you acknowledge and agree that you are participating in the activities for which you use this application voluntarily, and you are solely responsible for your own conduct and interactions with other users of the application. The application assumes no responsibility or liability for any acts or omissions by you or other users of the application.
@@ -47,7 +48,7 @@ function ProfileForm() {
           </label>
         </section>
 
-        <section className="SignUpPage-section">
+        <section className="Role-section">
              <h2> Role Selection</h2>
             <div>
                 <button className="button driver-button" onClick={handleDriverSignup}>
@@ -58,19 +59,12 @@ function ProfileForm() {
                 </button>
                 </div>
 
+        </section>
 
- 
-    </section>
-
-
-
-</div>
-
+        </div>
+    </div>
     );
 
 }
-
-
-
 
 export default ProfileForm;
