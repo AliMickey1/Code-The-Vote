@@ -3,9 +3,9 @@ import "../App.css";
 import { useNavigate } from "react-router-dom";
 import Leaderboard from "../Components/Leaderboard";
 import Quiz from "../Components/Quiz";
-import participationBadge from "../assets/participation-badge.png.webp";
-import quizMaster from "../assets/quiz-master.png";
-import topContributor from "../assets/top-contributor.png";
+import participationBadge from '../assets/participate.png'; // Adjust the path as necessary
+import quizMaster from '../assets/quiz.png'; // Adjust the path as necessary
+import topContributor from '../assets/contributor.png'; // Adjust the path as necessary
 import VolunteerDriver from "./VolunteerSignup";
 
 function LandingPage() {
