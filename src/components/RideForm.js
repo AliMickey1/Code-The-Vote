@@ -25,7 +25,7 @@ const RideForm = () => {
       rideType,
       accommodations,
     });
-    setSuccessMessage("Ride created successfully!");
+    setSuccessMessage("Ride Created Successfully!");
     // Clear the form fields
     setPickupLocation("");
     setDestination("");
