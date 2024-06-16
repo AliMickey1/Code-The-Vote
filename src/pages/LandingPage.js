@@ -4,6 +4,10 @@ import { useState } from "react";
 import "../App.css"; // Make sure this path is correct
 import { Link } from "react-router-dom";
 import Leaderboard from "../Components/Leaderboard"; 
+import participationBadge from '../assets/participation-badge.png.webp'; // Adjust the path as necessary
+import quizMaster from '../assets/quiz-master.png'; // Adjust the path as necessary
+import topContributor from '../assets/top-contributor.png'; // Adjust the path as necessary
+
 
 function LandingPage() {
 
@@ -41,9 +45,9 @@ const toggleLeaderboard = () => {
         <section className="LandingPage-section">
           <h2>Want a badge like this? Participate in our Quizzes or share a ride!</h2>
           <div className="badges">
-            <span className="badge badge-blue">Participation Badge</span>
-            <span className="badge badge-green">Quiz Master</span>
-            <span className="badge badge-red">Top Contributor</span>
+            <img src={participationBadge} alt="Participation Badge" className="badge-icon" />
+            <img src={quizMaster} alt="Quiz Master" className="badge-icon" />
+            <img src={topContributor} alt="Top Contributor" className="badge-icon" />
           </div>
 
 

@@ -345,37 +345,40 @@ background-color: #0056b3;
 }
 
 
+/* Leaderboard items styling */
+
 .leaderboard-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
   max-width: 800px;
   margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-in-out;
-}
-
-.leaderboard-container ul {
-  list-style: none;
-  padding: 0;
 }
 
 .leaderboard-item {
-  background-color: #e9ecef;
-  margin-bottom: 10px;
+  background-color: #fff;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid #dee2e6;
-  transition: transform 0.3s ease-in-out;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .leaderboard-item p {
   margin: 5px 0;
 }
 
-.leaderboard-item:hover {
-  transform: scale(1.02);
-  background-color: #1063b5;
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.badge-icon {
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -418,7 +421,7 @@ background-color: #0056b3;
 }
 
 /* Badge Styles */
-.badges {
+/* .badges {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -443,7 +446,7 @@ background-color: #0056b3;
 
 .badge-red {
   background-color: #dc3545;
-}
+} */
 
 /* Badge Links Styles */
 .badge-links {
