@@ -20,10 +20,10 @@ function Header() {
         <Link to="/leaderboard">Leaderboard</Link>
       </li>
       <li className="nav-item">
-        <Link to="/create-ride">Create Ride</Link>
+        <Link to="/Volunteering">Become a Driver</Link>
       </li>
       <li className="nav-item">
-        <Link to="/user-stories">User Stories</Link>
+        <Link to="/ride-request">Request a Ride</Link>
       </li>
       <li className="nav-item">
         <Link to="/Gibberish">Wrong Link Test</Link>

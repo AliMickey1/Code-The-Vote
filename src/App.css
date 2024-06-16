@@ -6,12 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
@@ -20,25 +15,6 @@ body {
     text-align: center;
   }
 
-
-  /* wrong page section */
-
-
-
-  /* end of wrong page section */
-  .wrongPageBackground {
-    background-color: #007bff; /* Background color */
-    color: white; /* Text color */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full height of the viewport */
-    margin: 0; /* Remove default margin */
-    padding: 0 20px; /* Padding around the content */
-    box-sizing: border-box; /* Ensure padding is included in total height */
-    text-align: center; /* Center text within container */
-    line-height: 1.5; /* Example line height */
-}
   /* Layout section */
 
   .nav-list {
@@ -50,32 +26,6 @@ body {
     margin: 0;
     background-color: #282c34;
   }
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.App {
-  text-align: center;
-}
-
-/* h2 {
-  color: #007bff;
-  text-align: center;
-  margin-bottom: 20px;
-} */
-/* Layout section */
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #282c34;
-}
 
 .nav-item {
   flex: 1;
@@ -104,6 +54,10 @@ margin: 0;
 background-color: #282c34;
 color: white;
 }
+
+/*end of layout section */
+
+/*chatbox section */
 
 #chatbox {
   position: fixed;
@@ -155,7 +109,145 @@ color: white;
   padding: 5px 10px;
 }
 
-/* End of layout section */
+/* End of chatbox section */
+
+/* wrong page section */
+
+.wrongPageBackground {
+  background-color: #007bff; 
+  color: white; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  margin: 0; 
+  padding: 0 20px; 
+  box-sizing: border-box; 
+  text-align: center; 
+  line-height: 1.5; 
+
+/* end of wrong page section */
+}
+
+/*Ride request section */
+
+.form-container {
+  display: flex;
+  justify-content: center; /* Centers the form horizontally */
+  align-items: center; /* Centers the form vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 0 5%; /* 10% whitespace on both sides */
+}
+
+.ride-request-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the form elements horizontally */
+  gap: 1rem; /* Space between form elements */
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #2ca7f9; /* Set the background color */
+  color: white; /* Optional: Change text color for better contrast */
+  max-width: 80%; /* Ensure form does not exceed container width */
+  max-height: 80vh; /* Limit form height to 80% of viewport height */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds max-height */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Optional: Limit the width of the form groups */
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkbox-group {
+  display: flex; /* Display checkboxes in a row */
+  justify-content: center; /* Center checkboxes horizontally */
+  gap: 2rem; /* Increased space between checkboxes */
+}
+
+.checkbox-group label {
+  display: flex; /* Align checkbox and label horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.ride-request-container button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+/* end of ride request section */
+
+/* Ride Volunteer Section */
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%; /* 10% whitespace on both sides */
+}
+
+.volunteer-driver-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #2ca7f9;
+  color: white;
+  max-width: 100%; /* Ensure form does not exceed container width */
+  max-height: 80vh; /* Limit form height to 80% of viewport height */
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds max-height */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px; /* Limit the width of the form groups */
+}
+
+.input {
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+/* end of Ride Volunteer Section */
 
 
 .LandingPage-header {
@@ -163,8 +255,8 @@ color: white;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 .LandingPage-content {
