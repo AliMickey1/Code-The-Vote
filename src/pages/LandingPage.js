@@ -53,7 +53,7 @@ const toggleLeaderboard = () => {
 
           <div className="badge-links">
             <Link to="/quiz" className="badge-link">Take the Quiz</Link>
-            <Link to="/create-ride" className="badge-link">Create a Ride</Link>
+            <Link to="/ride-request" className="badge-link">Request a Ride</Link>
           </div>
 
           

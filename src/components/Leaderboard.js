@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import leaderboardData from '../Data/LeaderboardData';
 import '../App.css';  // Ensure this path is correct
-import { Fireworks } from 'fireworks-js';
 import participationBadge from '../assets/participation-badge.png.webp'; // Adjust the path as necessary
 import quizMaster from '../assets/quiz-master.png'; // Adjust the path as necessary
 import topContributor from '../assets/top-contributor.png'; // Adjust the path as necessary
@@ -15,19 +14,7 @@ const Leaderboard = () => {
     setRiders(leaderboardData.riders.slice(0, 5));
     setDrivers(leaderboardData.drivers.slice(0, 5));
 
-    // Firework effect
-    const container = document.getElementById('fireworks-container');
-    if (container) {
-      const fireworks = new Fireworks(container, { 
-        speed: 3,
-        particles: 100,
-        explosion: 5,
-        intensity: 20
-      });
-      fireworks.start();
-      
-      return () => fireworks.stop();
-    }
+   
   }, []);
 
   return (
@@ -69,7 +56,7 @@ const Leaderboard = () => {
           </li>
         ))}
       </ul>
-      <div id="fireworks-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}></div>
+      
     </div>
   );
 };
