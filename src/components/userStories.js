@@ -65,6 +65,60 @@ const UserStories = () => {
           <li style={styles.listItem}>In sharing and exchanging views, it's critical to implement functions of receiving feedback and reviews to continuously improve the App's features and user experience.</li>
         </ul>
       </section>
+
+      <section style={styles.section}>
+        <h2 style={styles.sectionHeader}>HR Admin Side:</h2>
+        <ul>
+          <li style={styles.listItem}>
+            <strong>Insurance Coverage:</strong>
+            <ul>
+              <li style={styles.listItem}>Nonprofit-Owned Vehicles: If your nonprofit owns vehicles used by volunteer drivers, ensure you have a commercial auto insurance policy that covers liability, physical damage, and medical payments for occupants.</li>
+            </ul>
+          </li>
+          <li style={styles.listItem}>
+            <strong>Driver Screening:</strong>
+            <ul>
+              <li style={styles.listItem}>Conduct thorough background checks and review motor vehicle records for volunteer drivers. Ensure they meet specific qualifications and have a safe driving history.</li>
+              <li style={styles.listItem}>Establish a regular driver screening process to prequalify potential drivers.</li>
+            </ul>
+          </li>
+          <li style={styles.listItem}>
+            <strong>Training and Orientation:</strong>
+            <ul>
+              <li style={styles.listItem}>Train volunteer drivers on safe driving practices, including defensive driving, passenger assistance, and sensitivity training.</li>
+              <li style={styles.listItem}>Use a driver training checklist to cover essential topics and document training completion.</li>
+            </ul>
+          </li>
+          <li style={styles.listItem}>
+            <strong>Code of Conduct and Ethics:</strong>
+            <ul>
+              <li style={styles.listItem}>Create a written code of conduct for volunteer drivers. Address confidentiality, conflict of interest, and ethical behavior.</li>
+              <li style={styles.listItem}>Emphasize compliance with traffic laws and avoiding controlled substances.</li>
+            </ul>
+          </li>
+          <li style={styles.listItem}>
+            <strong>Vehicle Maintenance:</strong>
+            <ul>
+              <li style={styles.listItem}>Inspect vehicles daily, especially if volunteers use their own cars. Regular maintenance ensures safety and reliability.</li>
+              <li style={styles.listItem}>Encourage volunteers to maintain their vehicles properly.</li>
+            </ul>
+          </li>
+          <li style={styles.listItem}>
+            <strong>Incident Response Plan:</strong>
+            <ul>
+              <li style={styles.listItem}>Establish a plan for handling incidents, accidents, and collisions. Document procedures for managers at the scene of a collision and media relations.</li>
+              <li style={styles.listItem}>Use incident reports to track and address any issues.</li>
+            </ul>
+          </li>
+          <li style={styles.listItem}>
+            <strong>Record Keeping:</strong>
+            <ul>
+              <li style={styles.listItem}>Maintain driver records, vehicle records, and rider information. Record trip requests, reports, and other relevant data.</li>
+              <li style={styles.listItem}>Keep accurate records on riders, including trip purpose and demographics.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 };

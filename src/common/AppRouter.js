@@ -8,6 +8,8 @@ import Quiz from "../Components/Quiz";
 import Leaderboard from "../Components/Leaderboard";
 import RideForm from "../Components/RideForm";
 import Profile from "../Components/Profile";
+import SignUp from '../pages/SignUpPage';
+
 
 function AppRouter() {
   return (
@@ -19,6 +21,8 @@ function AppRouter() {
         <Route path="create-ride" element={<RideForm />} />
         <Route path="user-stories" element={<UserStories />} />
         <Route path="*" element={<Profile />} />
+        <Route path="signup" element={<SignUp />} />
+       
       </Route>
     </Routes>
   );
