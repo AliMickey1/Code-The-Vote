@@ -446,10 +446,92 @@ color: white;
 /* end of Rider Sign Up section */
 
 /* Profile section */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
+.profile-container {
+  width: 800px;
+  margin: 0 auto;
+  background-color: lightblue;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
 
+.profile-container .profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-color: #ddd;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.profile-container .profile-picture img {
+  max-width: 100%;
+}
 
+.profile-container .username {
+  font-size: 30px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.centered {
+  width: 50%; /* Adjust this to change the width of the list */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 10px;;
+}
+
+.preferences p{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.preferences h3{
+  font-size: 30px;
+}
+
+.preferences li{
+  margin-left: 20px;
+  /* text-align: left; */
+}
+
+.profile-container .progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.profile-container .progress-bar .progress {
+  height: 100%;
+  background-color: #4caf50;
+  width: 50%; /* Adjust this to represent the user's progress */
+}
+
+.badge-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgReduce{
+  width: 50%;
+
+}
 
 
 
