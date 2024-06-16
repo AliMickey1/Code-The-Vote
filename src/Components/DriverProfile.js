@@ -32,7 +32,6 @@ function DriverProfile({setProfile}) {
         })
     const [times, setTimes] = useState("")
 
-    // const [selectedOptions, setSelectedOptions] = useState([]);
 
     const handleInputChange = (event) => {
         const selected = Array.from(event.target.selectedOptions, option => option.value);

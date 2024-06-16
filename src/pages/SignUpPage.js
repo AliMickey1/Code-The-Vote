@@ -14,7 +14,6 @@ function SignUpPage() {
 
   const handleSubmit = () => {
     if (verified && role && agreed) {
-      // Redirect to profile page
       console.log("Redirecting to profile page...");
     } else {
       alert("Please complete all required fields.");
@@ -29,14 +28,12 @@ function SignUpPage() {
       </header>
 
       <div className="SignUpPage-content">
-        {/* ID Verification */}
         <section className="SignUpPage-section">
           <h2>1. ID Verification</h2>
           <button onClick={handleVerification}>Verify ID</button>
           {verified && <p>ID Verified ✓</p>}
         </section>
 
-        {/* Role Selection */}
         <section className="SignUpPage-section">
           <h2>2. Role Selection</h2>
           <label>
@@ -61,7 +58,6 @@ function SignUpPage() {
           </label>
         </section>
 
-        {/* Disclaimer */}
         <section className="SignUpPage-section">
           <h2>3. Disclaimer</h2>
           <p>Include your disclaimer text here, e.g., rules of rides.</p>
@@ -74,18 +70,18 @@ function SignUpPage() {
           </label>
         </section>
 
-        {/* Language Selection */}
         <section className="SignUpPage-section">
           <h2>4. Language Selection</h2>
-          <select value={language} onChange={(e) => setLanguage(e.target.value)}>
+          <select
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+          >
             <option value="">Select Language</option>
             <option value="english">English</option>
             <option value="spanish">Spanish</option>
-            {/* Add more options as needed */}
           </select>
         </section>
 
-        {/* Submit Button */}
         <button onClick={handleSubmit}>Submit</button>
       </div>
     </div>
