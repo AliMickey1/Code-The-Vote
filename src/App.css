@@ -526,10 +526,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .imgReduce{
-  width: 50%;
+  width: 20%;
 
 }
 

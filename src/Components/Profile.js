@@ -1,8 +1,8 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import ProfileForm from './ProfileForm';
-import participation from '../assets/participation-badge.png.webp'
-import quiz from '../assets/quiz-master.png'
+import quiz from '../assets/Decoration/quiz.png'
+import participation from '../assets/Decoration/participate.png'
 
 function Profile({Profile}) {
     const { user } = useAuth0();
@@ -46,7 +46,7 @@ function Profile({Profile}) {
             </div>
 
             <div className='badge-container'>
-                <img src={quiz} alt='quiz badge' />
+                <img className='imgReduce' src={quiz} alt='quiz badge' />
                 <img className='imgReduce' src={participation} alt='participation badge' />
             </div>
             
