@@ -149,8 +149,8 @@ const RideForm = () => {
         <button type="submit" className="button">
           Create Ride
         </button>
+        {successMessage && <p>{successMessage}</p>}
       </form>
-      {successMessage && <p>{successMessage}</p>}
     </div>
   );
 };
