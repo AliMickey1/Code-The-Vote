@@ -250,6 +250,214 @@ color: white;
 
 /* end of ride request section */
 
+/* Sign Up section */
+.Signup-container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: lightgray 2px solid;
+}
+
+.SignUpPage-header {
+  background-color: #2C85F9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.Disclaimer-section {
+  background-color: white;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%
+}
+
+.Disclaimer-section p{
+  margin: 30px;
+}
+
+.Role-section h2{
+  text-align: center;
+
+}
+
+/* end of Sign Up section */
+
+/* Driver Sign Up section */
+.DriverSignup-container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.img-driver-header{
+  width: 15%;
+  height: 25%;
+  margin-bottom: 20px;
+}
+
+.Form-header{
+  background-color: #2C85F9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
+
+
+
+
+
+
+
+/* end of Driver Sign Up section */
+
+/* Rider Sign Up section */
+.RiderSignup-container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.Form-header{
+  background-color: #2C85F9;
+  color: white;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center; 
+  align-items: center; 
+  font-size: 2em;
+  /* padding: 20px; */
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-rider-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-rider{
+  width: 25%;
+  margin: 10px;
+}
+
+.img-rider2{
+  width: 15%;
+  margin: 10px;
+}
+
+.img-rider3{
+  width: 15%;
+  margin: 10px;
+}
+
+.img-rider-header{
+  width: 25%;
+  height: 25%;
+  margin-bottom: 20px;
+
+}
+
+.signup-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.signup-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
+
+
+.img-rider-container{
+  background-color: #2C85F9;
+
+}
+
+
+
+
+
+/* end of Rider Sign Up section */
+
+/* Profile section */
+
+
+
+
+
+
+
+
+
+/* end of Profile section */
+
+
 /* Ride Volunteer Section */
 
 .form-container {

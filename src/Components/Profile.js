@@ -18,7 +18,7 @@ function Profile({Profile}) {
             <h2>{user.name}</h2>
             <p>{user.email}</p>
   
-            {/* <ProfileForm /> */}
+            <ProfileForm />
         </div>
     );
 }
