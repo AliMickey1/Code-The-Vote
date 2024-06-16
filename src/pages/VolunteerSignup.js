@@ -13,9 +13,13 @@ function VolunteerDriver() {
     wheelchairAccess: false,
   });
 
+  const SelectionRedirect = () => {
+    window.location.href = "http://localhost:3000/Ride-Selection";
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Logic to handle form submission
+
     console.log("Form submitted:", {
       stateOfResidence,
       vehicleMake,
@@ -24,9 +28,7 @@ function VolunteerDriver() {
       maxPassengers,
       accommodations,
     });
-    // You can add further logic here, e.g., sending data to backend
 
-    // Reset the form fields after submission if needed
     setStateOfResidence("");
     setVehicleMake("");
     setVehicleModel("");
@@ -48,7 +50,6 @@ function VolunteerDriver() {
     }));
   };
 
-  // List of all 50 states
   const states = [
     { abbreviation: "", name: "--Select state--" },
     { abbreviation: "AL", name: "Alabama" },
@@ -105,8 +106,10 @@ function VolunteerDriver() {
 
   return (
     <div className="form-container">
-      <form className="volunteer-driver-form" onSubmit={handleSubmit}>
-        {/* State of Residence */}
+      <form
+        className="volunteer-driver-form"
+        onSubmit={[handleSubmit, SelectionRedirect]}
+      >
         <div className="form-group">
           <label htmlFor="stateOfResidence">State of Residence:</label>
           <select
@@ -124,7 +127,6 @@ function VolunteerDriver() {
           </select>
         </div>
 
-        {/* Vehicle Information */}
         <div className="form-group">
           <label>Vehicle Make:</label>
           <input
@@ -156,7 +158,6 @@ function VolunteerDriver() {
           />
         </div>
 
-        {/* Maximum Passengers */}
         <div className="form-group">
           <label>Maximum Number of Passengers:</label>
           <input
@@ -168,7 +169,6 @@ function VolunteerDriver() {
           />
         </div>
 
-        {/* Accommodation Options */}
         <div className="form-group">
           <label>
             Can you accommodate passengers with any of the following
@@ -214,7 +214,6 @@ function VolunteerDriver() {
           </div>
         </div>
 
-        {/* Submit Button */}
         <button type="submit" className="button">
           Submit
         </button>
