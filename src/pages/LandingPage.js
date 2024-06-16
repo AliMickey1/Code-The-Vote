@@ -6,6 +6,8 @@ import Quiz from "../Components/Quiz";
 import participationBadge from '../assets/participation-badge.png.webp'; // Adjust the path as necessary
 import quizMaster from '../assets/quiz-master.png'; // Adjust the path as necessary
 import topContributor from '../assets/top-contributor.png'; // Adjust the path as necessary
+import VolunteerDriver from "./VolunteerSignup";
+
 
 function LandingPage() {
   const [showSection, setShowSection] = useState("");
@@ -20,7 +22,7 @@ function LandingPage() {
   };
 
   const handleVolunteerRide = () => {
-    navigate("/volunteer-ride");
+    navigate("/Volunteering");
   };
 
   const handleQuiz = () => {
