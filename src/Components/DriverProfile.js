@@ -1,100 +1,58 @@
-// // Define a constructor function for a VolunteerDriver
-// function DriverProfile(name, age, profileType, email, vehicleType, vehicleColor, vehicleMake, vehicleModel, rating, location, contact, language, accessibility, yearsOfExperience, availability, hoursPerDay, totalHoursDriven) {
-//     this.name = name;
-//     this.age = age;
-//     this.email = email;
-//     this.vehicleType = vehicleType;
-//     this.vehicleColor = vehicleColor;
-//     this.vehicleMake = vehicleMake;
-//     this.vehicleModel = vehicleModel;
-//     this.yearsOfExperience = yearsOfExperience;
-//     this.contact = contact;
-//     this.language = language;
-//     this.accessibility = accessibility;
-//     this.location = location;
-//     this.rating = rating;
-//     this.availability = availability; // This could be an array of available days
-//     this.hoursPerDay = hoursPerDay;
-//     this.totalHoursDriven = totalHoursDriven;
-//     this.profileType = profileType;
-// }
-
-// // Create a new instance of VolunteerDriver
-// var driver1 = new DriverProfile("John Doe", 35, "name@email.com", "driver", "white", "Car", "Chevy", "Malibu", 5, "Anywhere, USA", "123-456-7890", "Spanish", "none", 1, ["Monday", "Wednesday", "Friday"], 5);
-
-// // Access properties of the driver
-// console.log(driver1.name); // Outputs: John Doe
-// console.log(driver1.availability); // Outputs: ["Monday", "Wednesday", "Friday"]
-// console.log(driver1.totalHoursDriven); //Outputs 12 (3 days * 4 hours per day)
-
-// export default DriverProfile;
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import Profile from "./Profile";
 
-function DriverProfile() {
-    const [profile, setProfile] = useState({
-        vehicleType: '',
-        vehicleColor: '',
-        vehicleMake: '',
-        vehicleModel: '',
-        yearsOfExperience: '',
-        contactInformation: '',
-        languagePreference: '',
-        accessibilityNeeds: '',
-        location: '',
-        ratings: '',
-        availability: {
-            days: {
-                monday: false,
-                tuesday: false,
-                wednesday: false,
-                thursday: false,
-                friday: false,
-                saturday: false,
-                sunday: false,
-            },
-            times: '',
-        },
-        hoursPerDayWorked: '',
-        totalHoursDriven: '',
-    });
+
+function DriverProfile({setProfile}) {
+    const navigate = useNavigate();
+    const [otherInfo, setOtherInfo] = useState("")
+    const [custname, setCustName] = useState("")
+    const [email, setEmail] = useState("")
+    const [vehicleType, setVehicleType] = useState("")
+    const [vehicleColor, setVehicleColor] = useState("")
+    const [vehicleMake, setVehicleMake] = useState("")
+    const [vehicleModel, setVehicleModel] = useState("")
+    const [yearsOfExperience, setYearsOfExperience] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("")
+    const [languagePreference, setLanguagePreference] = useState("")
+    const [accessibilityNeeds, setAccessibilityNeeds] = useState("")
+    const [availability, setAvailability] = useState({
+            monday: false,
+            tuesday: false,
+            wednesday: false,
+            thursday: false,
+            friday: false,
+            saturday: false,
+            sunday: false,
+        })
+    const [times, setTimes] = useState("")
+
+    const [selectedOptions, setSelectedOptions] = useState([]);
 
     const handleInputChange = (event) => {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-
-        if (Object.keys(profile.availability.days).includes(name)) {
-            setProfile(prevProfile => ({
-                ...prevProfile,
-                availability: {
-                    ...prevProfile.availability,
-                    days: {
-                        ...prevProfile.availability.days,
-                        [name]: value,
-                    },
-                },
-            }));
-        } else {
-            setProfile({
-                ...profile,
-                [name]: value
-            });
-        }
-    }
-
-
+        const selected = Array.from(event.target.selectedOptions, option => option.value);
+        setTimes(selected);
+      };
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(profile);
+        Profile({custname, email, phoneNumber, languagePreference, yearsOfExperience, availability, times, accessibilityNeeds, vehicleColor, vehicleMake, vehicleModel, vehicleType,  otherInfo})
+        navigate('/profile')
     }
 
     return (
     <div>
-        <form>
-            <label>
+        <form onSubmit={handleSubmit}>
+        <label>
+        Name:
+        <input type="text" name="custname" onChange={(e) => setCustName(e.target.value)} />
+      </label>
+      <label>
+        Email:
+        <input type="email" name="email" onChange={(e) => setEmail(e.target.value)} />
+      </label>
+      <label>
             Vehicle Type:
-            <select name="vehicleType" value={profile.vehicleType} onChange={handleInputChange}>
+            <select name="vehicleType" value={vehicleType} onChange={(e) => setVehicleType(e.target.value)}>
                 <option value="car">Car</option>
                 <option value="van">Van</option>
                 <option value="suv">SUV</option>
@@ -103,27 +61,27 @@ function DriverProfile() {
         </label>
         <label>
             Vehicle Color:
-            <input type="text" name="vehicleColor" value={profile.vehicleColor} onChange={handleInputChange} />
+            <input type="text" name="vehicleColor" value={vehicleColor} onChange={(e) => setVehicleColor(e.target.value)} />
         </label> <br/>
         <label>
             Vehicle Make:
-            <input type="text" name="vehicleMake" value={profile.vehicleMake} onChange={handleInputChange} />
+            <input type="text" name="vehicleMake" value={vehicleMake} onChange={(e) => setVehicleMake(e.target.value)} />
         </label> <br/>
         <label>
             Vehicle Model:
-            <input type="text" name="vehicleModel" value={profile.vehicleModel} onChange={handleInputChange} />
+            <input type="text" name="vehicleModel" value={vehicleModel} onChange={(e) => setVehicleModel(e.target.value)} />
         </label> <br/>
         <label>
             Years of Experience:
-            <input type="text" name="yearsofexperience" value={profile.yearsOfExperience} onChange={handleInputChange} />
+            <input type="number" name="yearsofexperience" value={yearsOfExperience} onChange={(e) => setYearsOfExperience(e.target.value)} />
         </label> <br/>
         <label>
             Phone Number: 
-            <input type="tel" name="phoneNumber" value={profile.phoneNumber} onChange={handleInputChange} />
+            <input type="tel" name="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </label><br/>
         <label>
             Language Preference:
-            <select name="languagePreference" value={profile.languagePreference} onChange={handleInputChange}>
+            <select name="languagePreference" value={languagePreference} onChange={(e) => setLanguagePreference(e.target.value)}>
                 <option value="English">English</option>
                 <option value="Spanish">Spanish</option>
                 <option value="French">French</option>
@@ -133,7 +91,7 @@ function DriverProfile() {
         </label><br/>
         <label>
             Can you accommodate accessibility needs?
-            <select name="accommodationNeed" value={profile.accommodationNeed} onChange={handleInputChange}>
+            <select name="accommodationNeed" value={accessibilityNeeds} onChange={(e) => setAccessibilityNeeds(e.target.value)}>
                 <option value="canAccommodate">Yes</option>
                 <option value="cannotAccommodate">No</option>
             </select>
@@ -141,39 +99,69 @@ function DriverProfile() {
         <label>
             Availability:
             <label>
-                <input type="checkbox" name="monday" checked={profile.availability.days.monday} onChange={handleInputChange} />
+                <input type="checkbox" name="monday" checked={availability.monday} onChange={(e) => setAvailability(e.target.value)} />
                 Monday
             </label>
             <label>
-                <input type="checkbox" name="tuesday" checked={profile.availability.days.tuesday} onChange={handleInputChange} />
+                <input type="checkbox" name="tuesday" checked={availability.tuesday} onChange={handleInputChange} />
                 Tuesday
             </label>
             <label>
             <label>
-                <input type="checkbox" name="wednesday" checked={profile.availability.days.wednesday} onChange={handleInputChange} />
+                <input type="checkbox" name="wednesday" checked={availability.wednesday} onChange={handleInputChange} />
                 Wednesday
             </label>
             <label>
-                <input type="checkbox" name="thursday" checked={profile.availability.days.thursday} onChange={handleInputChange} />
+                <input type="checkbox" name="thursday" checked={availability.thursday} onChange={handleInputChange} />
                 Thursday
             </label>
             <label>
-                <input type="checkbox" name="friday" checked={profile.availability.days.friday} onChange={handleInputChange} />
+                <input type="checkbox" name="friday" checked={availability.friday} onChange={handleInputChange} />
                 Friday
             </label>
             <label>
-                <input type="checkbox" name="saturday" checked={profile.availability.days.saturday} onChange={handleInputChange} />
+                <input type="checkbox" name="saturday" checked={availability.saturday} onChange={handleInputChange} />
                 Saturday
             </label>
             <label>
-                <input type="checkbox" name="sunday" checked={profile.availability.days.sunday} onChange={handleInputChange} />
+                <input type="checkbox" name="sunday" checked={availability.sunday} onChange={handleInputChange} />
                 Sunday
             </label>
                 Times:
-                <input type="text" name="times" value={profile.availability.times} onChange={handleInputChange} />
+                <input type="text" name="times" value={availability.times} onChange={(e) => setCustName(e.target.value)} />
             </label>
         </label><br/>
-        <input type="submit" value="Submit" />
+ 
+        <label for="times">Choose times:</label><br/>
+            <input type="checkbox" id="time1" name="times" value="08:00"/>
+        <label for="time1">08:00 AM</label>
+            <input type="checkbox" id="time2" name="times" value="09:00"/>
+        <label for="time2">09:00 AM</label>
+          <input type="checkbox" id="time3" name="times" value="10:00"/>
+        <label for="time3">10:00 AM</label>
+        <input type="checkbox" id="time4" name="times" value="11:00"/>
+        <label for="time4">11:00 AM</label>
+            <input type="checkbox" id="time5" name="times" value="12:00"/>
+        <label for="time5">12:00 PM</label>
+            <input type="checkbox" id="time6" name="times" value="13:00"/>
+        <label for="time6">1:00 PM</label>
+          <input type="checkbox" id="time7" name="times" value="14:00"/>
+        <label for="time7">2:00 PM</label>
+        <input type="checkbox" id="time8" name="times" value="15:00"/>
+        <label for="time6">3:00 PM</label>
+          <input type="checkbox" id="time9" name="times" value="16:00"/>
+        <label for="time7">4:00 PM</label>
+        <input type="checkbox" id="time10" name="times" value="17:00"/>
+        <label for="time8">5:00 PM</label>
+          <input type="checkbox" id="time11" name="times" value="18:00"/>
+        <label for="time7">6:00 PM</label>
+        <input type="checkbox" id="time12" name="times" value="19:00"/>
+        <label>
+        Anything else you need to indicate, please do so here:
+            <input type="text" name="otherInfo" onChange={(e) => setOtherInfo(e.target.value)} />
+        </label> <br/> 
+
+        <button type="submit">Submit</button>
      </form>
     </div>
     );

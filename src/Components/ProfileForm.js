@@ -1,70 +1,32 @@
 import React, { useState } from 'react';
-import DriverProfile from './DriverProfile';
-import RiderProfile from './RiderProfile';
+import { useNavigate } from 'react-router-dom';
+
+
 
 function ProfileForm() {
     const [agreed, setAgreed] = useState(false);
     const [role, setRole] = useState("");
-    // const [profile, setProfile] = useState({
-    //     vehicleType: '',
-    //     vehicleColor: '',
-    //     vehicleMake: '',
-    //     vehicleModel: '',
-    //     yearsOfExperience: '',
-    //     contactInformation: '',
-    //     languagePreference: '',
-    //     accessibilityNeeds: '',
-    //     location: '',
-    //     ratings: '',
-    //     availability: {
-    //         days: {
-    //             monday: false,
-    //             tuesday: false,
-    //             wednesday: false,
-    //             thursday: false,
-    //             friday: false,
-    //             saturday: false,
-    //             sunday: false,
-    //         },
-    //         times: '',
-    //     },
-    //     hoursPerDayWorked: '',
-    //     totalHoursDriven: '',
-    //     profileType: 'driver', 
-    // });
+    const navigate = useNavigate();
+ 
+        
+        const handleSubmit = (role) => {
+            if(!agreed) {
+                alert("Please complete all required fields.")
+              }
+            else{
+                navigate('/driverprofile');
 
+                if (role === 'driver') {
+                    navigate('/driverprofile');
+                // } else if(role === 'rider') {
+                }
+                else{
+                    navigate('/driverprofile');
 
-
-    // const handleInputChange = (event) => {
-    //     const target = event.target;
-    //     const value = target.type === 'checkbox' ? target.checked : target.value;
-    //     const name = target.name;
-
-    //     if (Object.keys(profile.availability.days).includes(name)) {
-    //         setProfile(prevProfile => ({
-    //             ...prevProfile,
-    //             availability: {
-    //                 ...prevProfile.availability,
-    //                 days: {
-    //                     ...prevProfile.availability.days,
-    //                     [name]: value,
-    //                 },
-    //             },
-    //         }));
-    //     } else {
-    //         setProfile({
-    //             ...profile,
-    //             [name]: value
-    //         });
-    //     }
-    // }
-
-
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-    }
+                    navigate('/riderprofile');
+                }
+            }
+          };
 
     return (
         <div className="SignUpPage-header">
@@ -80,44 +42,33 @@ function ProfileForm() {
               type="checkbox"
               onChange={(e) => setAgreed(e.target.checked)}
             />
-            I agree to the rules of rides
+            I agree to the rules of rides...
           </label>
         </section>
 
-        {/* <form onSubmit={handleSubmit}> */}
-            <section className="SignUpPage-section">
-            <h2>2. Role Selection</h2>
-            <label>
-                <input
-                type="radio"
-                name="role"
-                value="rider"
-                checked={role === "rider"}
-                onChange={() => setRole("rider")}
-                />
-                Rider
-            </label>
-            <label>
-                <input
-                type="radio"
-                name="role"
-                value="driver"
-                checked={role=== "driver"}
-                onChange={() => setRole("driver")}/>
-             Driver
-            </label>
-         
+        <section className="SignUpPage-section">
+            <form onSubmit={handleSubmit}>
+
+            <h2> Role Selection</h2>
+            <select value={role} onChange={(e) => setRole(e.target.value)}>
+            <option value="">Select a role</option>
+                <option value="rider">Rider</option>
+                <option value="driver">Driver</option>
+            </select>
+
+          <button type="submit">Submit</button>
+
+    </form>
+
  
     </section>
-        if(role === 'driver'){
-             <DriverProfile /> 
-        }
-        else{
-            <RiderProfile />
-        }
-{/* </form>    */}
+
+
+
 </div>
+
     );
+
 }
 
 
