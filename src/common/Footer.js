@@ -15,7 +15,7 @@ function Footer() {
           Chat
         </h1>
       </ul>
-      {isChatboxVisible && <Chatbox />} {/* Render Chatbox conditionally */}
+      {isChatboxVisible && <Chatbox />}
     </div>
   );
 }

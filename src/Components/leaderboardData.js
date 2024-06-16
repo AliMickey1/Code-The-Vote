@@ -63,7 +63,6 @@ const leaderboardData = {
       quizMaster: 35,
       topContributor: 10,
     },
-    // Add more rider data here...
   ],
   drivers: [
     {
