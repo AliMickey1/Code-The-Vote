@@ -642,3 +642,23 @@ background-color: #0056b3;
     opacity: 1;
   }
 }
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.driver-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+}
+
+.rider-button {
+  background-color: #008CBA; /* Blue */
+  color: white;
+  border: none;
+}
