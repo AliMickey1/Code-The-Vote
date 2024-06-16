@@ -15,8 +15,8 @@ const Leaderboard = () => {
 
   return (
     <div className="leaderboard-container">
-      <h2>Rider Leaderboard</h2>
-      <ul>
+      <h2 style={{ textAlign: "center" }}>Rider Leaderboard</h2>
+      <ul style={{ textAlign: "center" }}>
         {riders.map((rider) => (
           <li key={rider.id} className="leaderboard-item">
             <p>
@@ -54,8 +54,8 @@ const Leaderboard = () => {
         ))}
       </ul>
 
-      <h2>Driver Leaderboard</h2>
-      <ul>
+      <h2 style={{ textAlign: "center" }}>Driver Leaderboard</h2>
+      <ul style={{ textAlign: "center" }}>
         {drivers.map((driver) => (
           <li key={driver.id} className="leaderboard-item">
             <p>
