@@ -1,5 +1,6 @@
 // src/components/Quiz.js
 import React, { useState, useEffect } from "react";
+import "../App.css"; // Make sure this path is correct
 
 const Quiz = () => {
   const [quizData, setQuizData] = useState([]);
@@ -77,8 +78,7 @@ const Quiz = () => {
           { text: "They can change state election laws.", isCorrect: false },
           {
             text: "They can only vote once like any other citizen.",
-            isCorrect: false,
-          },
+            isCorrect: false },
         ],
       },
       {
@@ -149,14 +149,16 @@ const Quiz = () => {
   const currentQuestion = quizData[currentQuestionIndex];
 
   return (
-    <div>
+    <div className="quiz-container">
       <h2>Quiz</h2>
       <p>{currentQuestion.question}</p>
-      {currentQuestion.answers.map((answer, index) => (
-        <button key={index} onClick={() => handleAnswer(answer.isCorrect)}>
-          {answer.text}
-        </button>
-      ))}
+      <div className="answer-section">
+        {currentQuestion.answers.map((answer, index) => (
+          <button key={index} onClick={() => handleAnswer(answer.isCorrect)} className="answer-button">
+            {answer.text}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
