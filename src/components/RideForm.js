@@ -5,7 +5,7 @@ const RideForm = () => {
   const [destination, setDestination] = useState("");
   const [pickupTime, setPickupTime] = useState("");
   const [seatsAvailable, setSeatsAvailable] = useState("");
-  const [rideType, setRideType] = useState(""); // State for dropdown
+  const [rideType, setRideType] = useState("");
   const [accommodations, setAccommodations] = useState({
     hearingImpairment: false,
     visualImpairment: false,
@@ -17,7 +17,6 @@ const RideForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Check if all fields are filled
     if (
       pickupLocation &&
       destination &&
@@ -28,7 +27,6 @@ const RideForm = () => {
         (value) => value === true || value === false
       )
     ) {
-      // Logic to handle ride creation
       console.log("Ride created:", {
         pickupLocation,
         destination,
@@ -40,15 +38,13 @@ const RideForm = () => {
 
       setSuccessMessage("Ride Created Successfully!");
 
-      // Redirect to /Ride-Selection
       window.location.href = "/Ride-Selection";
 
-      // Clear the form fields
       setPickupLocation("");
       setDestination("");
       setPickupTime("");
       setSeatsAvailable("");
-      setRideType(""); // Reset dropdown to default value
+      setRideType("");
       setAccommodations({
         hearingImpairment: false,
         visualImpairment: false,
@@ -56,7 +52,6 @@ const RideForm = () => {
         wheelchairAccess: false,
       });
     } else {
-      // Handle the case where not all fields are filled
       console.log("Please fill in all the fields before submitting.");
     }
   };
