@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import leaderboardData from '../data/leaderboardData';
+import leaderboardData from '../Data/LeaderboardData';
 import '../App.css';  // Ensure this path is correct
 
 const Leaderboard = () => {
