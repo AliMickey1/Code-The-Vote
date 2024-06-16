@@ -1,21 +1,38 @@
-// src/pages/LandingPage.js
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "../App.css"; // Make sure this path is correct
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Leaderboard from "../Components/Leaderboard"; 
 import participationBadge from '../assets/participation-badge.png.webp'; // Adjust the path as necessary
 import quizMaster from '../assets/quiz-master.png'; // Adjust the path as necessary
 import topContributor from '../assets/top-contributor.png'; // Adjust the path as necessary
 
-
 function LandingPage() {
+  const [showSection, setShowSection] = useState("");
+  const navigate = useNavigate();
 
-const [showLeaderboard, setShowLeaderboard] = useState(false);
+  const handleBack = () => {
+    setShowSection("");
+  };
 
-const toggleLeaderboard = () => {
-  setShowLeaderboard(!showLeaderboard);
-};
+  const handleRequestRide = () => {
+    navigate("/ride-request");
+  };
+
+  const handleVolunteerRide = () => {
+    navigate("/volunteer-ride");
+  };
+
+  const handleQuiz = () => {
+    navigate("/quiz");
+  };
+
+  const handleLeaderboard = () => {
+    setShowSection("leaderboard");
+  };
+
+  const handleResources = () => {
+    setShowSection("resources");
+  };
 
   return (
     <div className="LandingPage">
@@ -27,10 +44,45 @@ const toggleLeaderboard = () => {
         </p>
       </header>
 
-      <div className="authContainer"></div>
-      <div className="LandingPage-content">
-        <section className="LandingPage-section">
-          <h2>Election Protection Resources</h2>
+      {showSection === "" && (
+        <div className="LandingPage-content">
+          <div className="left-column">
+            <div className="column">
+              <h3>Need help voting?</h3>
+              <button onClick={handleRequestRide}>Click here to *Request a ride*</button>
+            </div>
+            <div className="column">
+              <h3>Interested in volunteering?</h3>
+              <button onClick={handleVolunteerRide}>Click here to *Volunteer a ride*</button>
+            </div>
+          </div>
+          <div className="right-column">
+            <h3>Want a cool badge like this?</h3>
+            <p>You can earn them by sharing rides and taking quizzes!</p>
+            <div className="badges">
+              <img src={participationBadge} alt="Participation Badge" className="badge-icon" />
+              <img src={quizMaster} alt="Quiz Master" className="badge-icon" />
+              <img src={topContributor} alt="Top Contributor" className="badge-icon" />
+            </div>
+            <div className="badge-links">
+              <button onClick={handleQuiz}>Click here for quizzes!</button>
+              <button onClick={handleLeaderboard}>Click here to see leaderboard info!</button>
+              <button onClick={handleResources}>Click here to view important Election Protection Resources!</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSection === "leaderboard" && (
+        <div className="LandingPage-section">
+          <button onClick={handleBack}>Back</button>
+          <Leaderboard />
+        </div>
+      )}
+
+      {showSection === "resources" && (
+        <div className="LandingPage-section">
+          <button onClick={handleBack}>Back</button>
           <ul>
             <li><a href="https://statesuniteddemocracy.org/priorities/election-protection/" target="_blank" rel="noopener noreferrer">States United Democracy Center: Election Protection</a></li>
             <li><a href="https://www.brennancenter.org/our-work/research-reports/digital-disinformation-and-vote-suppression" target="_blank" rel="noopener noreferrer">Brennan Center for Justice: Digital Disinformation and Vote Suppression</a></li>
@@ -41,35 +93,8 @@ const toggleLeaderboard = () => {
             <li><a href="https://www.rockthevote.org/" target="_blank" rel="noopener noreferrer">Rock the Vote</a></li>
             <li><a href="https://www.lgbtmap.org/democracy-maps/laws_protecting_election_officials_against_threats" target="_blank" rel="noopener noreferrer">LGBTQ MAP: Laws Protecting Election Officials Against Threats</a></li>
           </ul>
-        </section>
-        <section className="LandingPage-section">
-          <h2>Want a badge like this? Participate in our Quizzes or share a ride!</h2>
-          <div className="badges">
-            <img src={participationBadge} alt="Participation Badge" className="badge-icon" />
-            <img src={quizMaster} alt="Quiz Master" className="badge-icon" />
-            <img src={topContributor} alt="Top Contributor" className="badge-icon" />
-          </div>
-
-
-          <div className="badge-links">
-            <Link to="/quiz" className="badge-link">Take the Quiz</Link>
-            <Link to="/ride-request" className="badge-link">Request a Ride</Link>
-          </div>
-
-          
-          <div className="cartoon-car">
-          <img src="https://clipartmag.com/images/car-cartoon-images-16.jpg" alt="Cartoon Car" />
-          </div>
-      </section>
-
-        <section className="LandingPage-section">
-          <h2>Leaderboard</h2>
-          {showLeaderboard && <Leaderboard />}
-          <button onClick={toggleLeaderboard}>
-            {showLeaderboard ? "Read Less" : "Read More"}
-          </button>
-        </section>
-      </div>
+        </div>
+      )}
     </div>
   );
 }

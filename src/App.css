@@ -440,42 +440,85 @@ background-color: #0056b3;
 }
 
 
-.LandingPage-header {
-  text-align: center;
-  padding: 20px;
-}
-
 .LandingPage-content {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
 }
 
+.left-column,
+.right-column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.column {
+  text-align: center;
+}
+
+
+
+.column button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.badge-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.badge-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badge-links button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .LandingPage-section {
-  margin-bottom: 20px;
-}
-
-.LandingPage-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.LandingPage-section ul li {
-  margin-bottom: 10px;
-}
-
-.LandingPage-section ul li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.LandingPage-section ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Badge Section Styles */
-.LandingPage-section {
-  background-color: #bfc3c0; /* Light gray background for better contrast */
   padding: 20px;
+  background-color: #f9f9f9;
   border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.LandingPage-section button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin: 10px 0;
 }
 
 /* Firework animation */
