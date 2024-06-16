@@ -110,7 +110,51 @@ color: white;
 }
 
 /* End of chatbox section */
+/* Volunteer selection section */
 
+.volunteer-selection-container {
+  background-color: #2ca7f9; /* Blue background for the volunteer selection container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Centers content vertically */
+}
+
+.Selection-Table {
+  border: 1px solid #000; /* Black border around each table */
+  margin: 10px;
+  background-color: white; /* White background for tables */
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td {
+  border: 1px solid #000; /* Black borders between table cells */
+  padding: 8px;
+  text-align: left;
+  color: black; /* All text in tables is black */
+}
+
+.accept-button {
+  background-color: #007bff; /* Grey background for button */
+  color: white; /* Text color of button is white */
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  display: block; /* Ensures button is block level for centering */
+  margin: 0 auto; /* Centers the button horizontally */
+}
+
+.accept-button:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}
+
+/* end of Volunteer selection section */
 /* wrong page section */
 
 .wrongPageBackground {

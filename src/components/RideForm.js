@@ -16,28 +16,49 @@ const RideForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Logic to handle ride creation
-    console.log("Ride created:", {
-      pickupLocation,
-      destination,
-      pickupTime,
-      seatsAvailable,
-      rideType,
-      accommodations,
-    });
-    setSuccessMessage("Ride Created Successfully!");
-    // Clear the form fields
-    setPickupLocation("");
-    setDestination("");
-    setPickupTime("");
-    setSeatsAvailable("");
-    setRideType(""); // Reset dropdown to default value
-    setAccommodations({
-      hearingImpairment: false,
-      visualImpairment: false,
-      physicalImpairment: false,
-      wheelchairAccess: false,
-    });
+
+    // Check if all fields are filled
+    if (
+      pickupLocation &&
+      destination &&
+      pickupTime &&
+      seatsAvailable &&
+      rideType &&
+      Object.values(accommodations).some(
+        (value) => value === true || value === false
+      )
+    ) {
+      // Logic to handle ride creation
+      console.log("Ride created:", {
+        pickupLocation,
+        destination,
+        pickupTime,
+        seatsAvailable,
+        rideType,
+        accommodations,
+      });
+
+      setSuccessMessage("Ride Created Successfully!");
+
+      // Redirect to /Ride-Selection
+      window.location.href = "/Ride-Selection";
+
+      // Clear the form fields
+      setPickupLocation("");
+      setDestination("");
+      setPickupTime("");
+      setSeatsAvailable("");
+      setRideType(""); // Reset dropdown to default value
+      setAccommodations({
+        hearingImpairment: false,
+        visualImpairment: false,
+        physicalImpairment: false,
+        wheelchairAccess: false,
+      });
+    } else {
+      // Handle the case where not all fields are filled
+      console.log("Please fill in all the fields before submitting.");
+    }
   };
 
   const handleAccommodationChange = (e) => {

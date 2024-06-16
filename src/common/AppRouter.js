@@ -11,6 +11,7 @@ import LoginButton from "../Components/LoginButton";
 import ProfileForm from "../Components/ProfileForm";
 import DriverProfile from "../Components/DriverProfile";
 import RiderProfile from "../Components/RiderProfile";
+import VolunteerSelection from "../pages/VolunteerSelection";
 
 function AppRouter() {
   return (
@@ -21,6 +22,7 @@ function AppRouter() {
         <Route path="leaderboard" element={<Leaderboard />} />
         <Route path="ride-request" element={<RideForm />} />
         <Route path="Volunteering" element={<VolunteerDriver />} />
+        <Route path="Ride-Selection" element={<VolunteerSelection />} />
         <Route path="*" element={<NoPageFound />} />
         <Route path="signup" element={<ProfileForm />} />
         <Route path="driverprofile" element={<DriverProfile />} />

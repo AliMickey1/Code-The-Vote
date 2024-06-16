@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import leaderboardData from '../Data/LeaderboardData';
-import '../App.css';  // Ensure this path is correct
+import React, { useState, useEffect } from "react";
+import leaderboardData from "./leaderboardData";
 import participationBadge from '../assets/participation-badge.png.webp'; // Adjust the path as necessary
 import quizMaster from '../assets/quiz-master.png'; // Adjust the path as necessary
 import topContributor from '../assets/top-contributor.png'; // Adjust the path as necessary
