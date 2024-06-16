@@ -48,7 +48,7 @@ function DriverProfile({setProfile}) {
     <div className="DriverSignup-container">
         <div className="Form-header">
             <h2>Driver Sign Up</h2>
-            <img className="img-driver-header" src={driver2} alt="person driving car" />
+            <img className="img-rider-header" src={driver2} alt="person driving car" />
             
         </div>
 
