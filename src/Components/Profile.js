@@ -17,6 +17,7 @@ function Profile({ Profile }) {
 
 
     return (
+        //data will be populated with data from form during prduction
         <div class="profile-container">
         <div className='profile-type'>
             <img src={profileType} alt='rider' />
@@ -41,9 +42,9 @@ function Profile({ Profile }) {
                     <li>I need to go to my voting location to vote on election day.</li>
                     <li>I need to go to my voting location to register to vote.</li>
                         <p>Accessibility Needs: </p>
-                    <li>N/A</li>
+                    <p2>N/A</p2>
                         <p>Any other information?</p>
-                    <li>None</li>
+                    <p2>None</p2>
                 </ul>
             </div>
             <div class="progress-bar">
