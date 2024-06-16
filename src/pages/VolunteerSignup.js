@@ -13,9 +13,7 @@ function VolunteerDriver() {
     wheelchairAccess: false,
   });
 
-  const SelectionRedirect = () => {
-    window.location.href = "http://localhost:3000/Ride-Selection";
-  };
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,17 +27,10 @@ function VolunteerDriver() {
       accommodations,
     });
 
-    setStateOfResidence("");
-    setVehicleMake("");
-    setVehicleModel("");
-    setVehicleColor("");
-    setMaxPassengers("");
-    setAccommodations({
-      hearingImpairment: false,
-      visualImpairment: false,
-      physicalImpairment: false,
-      wheelchairAccess: false,
-    });
+    // Handle any form processing logic here
+
+    // Mark the form as submitted
+    setFormSubmitted(true);
   };
 
   const handleAccommodationChange = (e) => {
@@ -104,12 +95,14 @@ function VolunteerDriver() {
     { abbreviation: "WY", name: "Wyoming" },
   ];
 
+  // Redirect function
+  if (formSubmitted) {
+    window.location.href = "http://localhost:3000/Ride-Selection";
+  }
+
   return (
     <div className="form-container">
-      <form
-        className="volunteer-driver-form"
-        onSubmit={[handleSubmit, SelectionRedirect]}
-      >
+      <form className="volunteer-driver-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="stateOfResidence">State of Residence:</label>
           <select
