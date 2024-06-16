@@ -1,18 +1,19 @@
+
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import ProfileForm from './ProfileForm';
 import quiz from '../assets/Decoration/quiz.png'
 import participation from '../assets/Decoration/participate.png'
 
-function Profile({Profile}) {
-    const { user } = useAuth0();
+function Profile({ Profile }) {
+  const { user } = useAuth0();
 
-    if (!user) {
-        return <div>Loading...</div>;
-    }
-    else if(user.type == null) {
-      <ProfileForm />
-    }
+  if (!user) {
+    return <div>Loading...</div>;
+  } else if (user.type == null) {
+    <ProfileForm />;
+  }
+
 
     return (
         <div class="profile-container">

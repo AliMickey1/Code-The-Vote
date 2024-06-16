@@ -27,9 +27,6 @@ function VolunteerDriver() {
       accommodations,
     });
 
-    // Handle any form processing logic here
-
-    // Mark the form as submitted
     setFormSubmitted(true);
   };
 
@@ -95,7 +92,6 @@ function VolunteerDriver() {
     { abbreviation: "WY", name: "Wyoming" },
   ];
 
-  // Redirect function
   if (formSubmitted) {
     window.location.href = "http://localhost:3000/Ride-Selection";
   }
