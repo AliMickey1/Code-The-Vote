@@ -5,7 +5,7 @@ import handshake from '../assets/Decoration/handshake-2009195_1280.png'
 import volunteerHelp from '../assets/Decoration/volunteer driver pexels-rdne-6647036.jpg'
 import helpPassenger from '../assets/Decoration/volunteer pexels-rdne-6647037.jpg'
 import volunteer from '../assets/Decoration/volunteer pexels-liza-summer-6348129.jpg'
-import driver2 from '../assets/Decoration/driver pexels-element5-1051071.jpg'
+import driver from '../assets/Decoration/driver dan-gold-kARZuSYMfrA-unsplash.jpg'
 
 
 function DriverProfile({setProfile}) {
@@ -48,7 +48,7 @@ function DriverProfile({setProfile}) {
     <div className="DriverSignup-container">
         <div className="Form-header">
             <h2>Driver Sign Up</h2>
-            <img className="img-rider-header" src={driver2} alt="person driving car" />
+            <img className="img-driver-header" src={driver} alt="person driving car" />
             
         </div>
 

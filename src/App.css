@@ -306,8 +306,8 @@ color: white;
 
 }
 
-.img-driver-header{
-  width: 15%;
+.RiderSignup-container .Form-header .img-rider-header{
+  width: 20%;
   height: 25%;
   margin-bottom: 20px;
 }
@@ -407,11 +407,9 @@ color: white;
   margin: 10px;
 }
 
-.img-rider-header{
-  width: 25%;
-  height: 25%;
+.DriverSignup-container .Form-header .img-driver-header{
+  width: 20%;
   margin-bottom: 20px;
-
 }
 
 .signup-form label {
