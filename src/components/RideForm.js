@@ -38,8 +38,6 @@ const RideForm = () => {
 
       setSuccessMessage("Ride Created Successfully!");
 
-      window.location.href = "/Ride-Selection";
-
       setPickupLocation("");
       setDestination("");
       setPickupTime("");
