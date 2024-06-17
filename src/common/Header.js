@@ -25,9 +25,6 @@ function Header() {
       <li className="nav-item">
         <Link to="/ride-request">Request a Ride</Link>
       </li>
-      <li className="nav-item">
-        <Link to="/Gibberish">Wrong Link Test</Link>
-      </li>
       {isAuthenticated ? (
         <>
           <li className="nav-item">
